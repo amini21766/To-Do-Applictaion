@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do Application</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <h1>To Do List</h1>
     <div class="input-container">
-        <input type="text" placeholder="Add New Task" id="taskInput">
-        <button class="addTaskBtn">+</button>
+      <input type="text" placeholder="Add New Task" id="taskInput" />
+      <button id="addTaskBtn">+</button>
     </div>
-</body>
+    <ul id="taskList"></ul>
+    <button id="deleteAllBtn">Delete All</button>
+
+    <!-- javascript added -->
+    <script src="script.js"></script>
+  </body>
 </html>
