@@ -1,95 +1,100 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 h1 {
-  text-align: center;
+    text-align: center;
 }
 .input-container {
-  display: flex;
-  width: 100%;
-  max-width: 400px;
-  margin-bottom: 10px;
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
 }
 #taskInput {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-right: 5px;
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px; 
+    margin-right: 0; 
 }
 #addTaskBtn {
-  padding: 10px;
-  padding-right: 13px;
-  padding-left: 13px;
-  border: none;
-  background-color: #007bff; 
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    white-space: nowrap;
+    display: inline-block; 
 }
 #taskList {
-  list-style: none;
-  padding: 0;
-  width: 100%;
-  max-width: 400px;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 400px;
 }
 .task {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background: white;
-  margin: 5px 0;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: white;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex-wrap: wrap; 
 }
 .task.done {
-  text-decoration: line-through;
-  color: grey;
+    text-decoration: line-through;
+    color: grey;
 }
-.deleteBtn,
-.completeBtn {
-  background: #5bc0de;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 5px 10px;
-  margin-left: 5px;
+.deleteBtn, .completeBtn {
+    background: #5bc0de;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-left: 5px;
 }
 .deleteBtn {
-  background: #d9534f; 
+    background: #d9534f; 
 }
 #deleteAllBtn {
-  padding: 10px;
-  border: none;
-  background-color: #dc3545; 
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #dc3545; 
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 @media (max-width: 500px) {
-  .input-container {
-    flex-direction: column;
-  }
-  #taskInput,
-  #addTaskBtn {
-    width: 100%;
-  }
-  .task {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .task div {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-  }
+    .input-container {
+        flex-direction: row;
+        width: 100%; 
+    }
+    #taskInput {
+        min-width: 0; 
+    }
+    #addTaskBtn {
+        flex-shrink: 0;
+        width: auto; 
+    }
+    .task {
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        align-items: center; 
+    }
+    .task div {
+        width: auto; 
+        display: flex;
+        justify-content: flex-end;
+    }
 }
